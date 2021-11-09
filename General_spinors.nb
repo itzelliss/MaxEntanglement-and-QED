@@ -1,0 +1,1356 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     49573,       1348]
+NotebookOptionsPosition[     43078,       1224]
+NotebookOutlinePosition[     43443,       1240]
+CellTagsIndexPosition[     43400,       1237]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["General spinors", "Title",
+ CellChangeTimes->{{3.845485090027486*^9, 
+  3.8454850946086817`*^9}},ExpressionUUID->"3f35d79d-1307-4c40-907e-\
+d4c427b640de"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"\[Theta]", "/", "2"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"\[Theta]", "/", "2"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8384908195734453`*^9, 3.838490839569689*^9}, {
+   3.838490870348876*^9, 3.838490915123313*^9}, 3.8384909494401803`*^9, 
+   3.83849105783558*^9, {3.838491106782564*^9, 3.8384911112919564`*^9}, {
+   3.838491226916827*^9, 3.8384913561321783`*^9}, {3.8384914077787952`*^9, 
+   3.838491432603404*^9}, {3.8384914761393003`*^9, 3.838491482433447*^9}, {
+   3.838491558813223*^9, 3.838491604293206*^9}, 3.8384916482034836`*^9, {
+   3.8384916974882936`*^9, 3.838491720722225*^9}, {3.8384917529834223`*^9, 
+   3.8384917800728884`*^9}, {3.8384939225299673`*^9, 3.838493934574814*^9}, {
+   3.838494174969331*^9, 3.838494192259513*^9}, {3.8384948419786015`*^9, 
+   3.838494851018751*^9}, {3.838494883237322*^9, 3.838494922563357*^9}, 
+   3.8384957928572454`*^9, {3.8384958618177323`*^9, 3.838495862711981*^9}, {
+   3.838495929761862*^9, 3.8384960191271615`*^9}, {3.8384960673669224`*^9, 
+   3.838496101981658*^9}, {3.838496153996668*^9, 3.8384962612465334`*^9}, {
+   3.8384962950312676`*^9, 3.8384964829713163`*^9}, {3.838496692555867*^9, 
+   3.8384967130609317`*^9}, {3.838496782835721*^9, 3.8384968201933517`*^9}, {
+   3.8384968943657036`*^9, 3.8384968967806997`*^9}, {3.8384969322656784`*^9, 
+   3.838496936765875*^9}, {3.838496986455618*^9, 3.8384970032258525`*^9}, {
+   3.8384970365657487`*^9, 3.838497140120234*^9}, {3.838497180725211*^9, 
+   3.8384973993855314`*^9}, {3.8384974534998827`*^9, 3.838497675294445*^9}, {
+   3.838497729904411*^9, 3.8384977393647785`*^9}, {3.8384978732645917`*^9, 
+   3.838497928924396*^9}, {3.838497963724266*^9, 3.838497965949312*^9}, {
+   3.8384979987138844`*^9, 3.838498120274029*^9}, {3.8384981734341493`*^9, 
+   3.8384981850741606`*^9}, {3.8384982684490404`*^9, 3.838498285784011*^9}, {
+   3.8384983286638002`*^9, 3.83849847980641*^9}, {3.8384985646933193`*^9, 
+   3.8384985689735203`*^9}, {3.838498708628228*^9, 3.838498727483179*^9}, {
+   3.8384987802125015`*^9, 3.838498793993116*^9}, {3.838504976427487*^9, 
+   3.838504982083847*^9}, 3.8385050994029627`*^9, {3.838506171780294*^9, 
+   3.838506182746767*^9}, 3.8387438952749166`*^9, {3.83874413601055*^9, 
+   3.838744263424684*^9}, {3.8388095095810423`*^9, 3.83880978091654*^9}, {
+   3.838810146972834*^9, 3.838810147519927*^9}, {3.8388101813238573`*^9, 
+   3.838810181669125*^9}, {3.8388106100684557`*^9, 3.8388106960233097`*^9}, {
+   3.83881072898269*^9, 3.838810777830414*^9}, {3.838810851431818*^9, 
+   3.838810938153178*^9}, {3.838811026720086*^9, 3.838811096594288*^9}, {
+   3.838811134846778*^9, 3.8388111470899897`*^9}, {3.838811179467176*^9, 
+   3.83881117998372*^9}, {3.8388145681920853`*^9, 3.8388146966412153`*^9}, {
+   3.838814887653955*^9, 3.838814893061338*^9}, {3.83881641454207*^9, 
+   3.838816417308216*^9}, {3.8388187309902487`*^9, 3.838818733037472*^9}, {
+   3.838897990420842*^9, 3.838898015330327*^9}, 3.8388981637253075`*^9, {
+   3.8388982742343655`*^9, 3.838898292380871*^9}, {3.838898323515074*^9, 
+   3.838898352337757*^9}, {3.8388985158030615`*^9, 3.838898524977727*^9}, {
+   3.838898583887431*^9, 3.8388986271772227`*^9}, {3.838898784631447*^9, 
+   3.8388987862751646`*^9}, 3.8388988194054384`*^9, {3.8388990199234266`*^9, 
+   3.838899029789071*^9}, {3.8388990897236443`*^9, 3.838899208271948*^9}, {
+   3.8388992962203803`*^9, 3.838899330204788*^9}, 3.842375539056703*^9, {
+   3.842375570642251*^9, 3.842375626281497*^9}, {3.842375680595776*^9, 
+   3.8423756809082413`*^9}, {3.8423769695068073`*^9, 3.842377038943797*^9}, {
+   3.842377805498329*^9, 
+   3.842377809836483*^9}},ExpressionUUID->"9d68519c-21f9-49ed-aed6-\
+d6f07411e503"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8454874099172792`*^9, 3.8454876915879107`*^9}, {
+  3.845487736684299*^9, 
+  3.845487906925355*^9}},ExpressionUUID->"f4a11731-88d7-4a6f-afb9-\
+a9893bf988d2"],
+
+Cell["\<\
+Recall that the transformation p \[Rule] - p, is equivalent to transform
+                                                            \[Theta] \[Rule] \
+\[Pi] - \[Theta]               
+  and  
+                                          \[Phi] \[Rule] \[Phi] + \[Pi]       \
+ if        0 \[LessEqual]  \[Phi]  < \[Pi]   and 
+                                          \[Phi] \[Rule] \[Phi] - \[Pi]       \
+ if        \[Pi]  \[LessEqual]  \[Phi]  < 2\[Pi]   and \
+\>", "Text",
+ CellChangeTimes->{{3.8454886412794447`*^9, 
+  3.845488883544058*^9}},ExpressionUUID->"9b1e6ab2-8a3f-4013-9df2-\
+18b38eacb6c3"],
+
+Cell[CellGroupData[{
+
+Cell["XZ - plane", "Chapter",
+ CellChangeTimes->{{3.845485201313092*^9, 
+  3.845485206817086*^9}},ExpressionUUID->"2eef13e4-d3c5-46dd-81f5-\
+8a7b15806141"],
+
+Cell[CellGroupData[{
+
+Cell["Incident particle 1 (\[Theta] = 0, \[Phi] = 0)", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485375441914*^9, 3.845485390961733*^9}, {3.8454866069021177`*^9, 
+   3.8454866095662203`*^9}, {3.845487023016717*^9, 3.845487054816555*^9}, 
+   3.845487243729582*^9, {3.845488150629426*^9, 3.845488171597497*^9}, 
+   3.845488207341566*^9, {3.845488406437883*^9, 
+   3.845488432182645*^9}},ExpressionUUID->"b29d5757-d765-4c7d-975b-\
+9952d6f31aa4"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"7a705936-cfb3-40db-a9c4-1ac860607e2b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident particle 2 (\[Theta] = \[Pi], \[Phi] = \[Pi])", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485392457902*^9, 3.845485393065907*^9}, {3.84548689064817*^9, 
+   3.845486892007846*^9}, 3.8454870664248037`*^9, {3.845487165153417*^9, 
+   3.845487166177401*^9}, 3.845487245169751*^9, {3.845488196893258*^9, 
+   3.845488203309725*^9}, {3.8454884551088123`*^9, 3.845488478852777*^9}, {
+   3.845488901599536*^9, 
+   3.8454889025852747`*^9}},ExpressionUUID->"b7c98baf-fde7-495c-8096-\
+360ef3c5249f"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"d540f8df-8273-4fdc-871b-4ff42a205282"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident antiparticle 1  (\[Theta] = 0, \[Phi] = 0)", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454853498573627`*^9, 3.84548535102531*^9}, {3.845485394417706*^9, 
+   3.84548540000143*^9}, {3.84548691087948*^9, 3.845486912903926*^9}, 
+   3.845488216341648*^9, {3.8454889046411343`*^9, 
+   3.8454889180191917`*^9}},ExpressionUUID->"58246a79-a439-480f-bd21-\
+0447202b8716"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"6a941134-175b-4c26-a2f1-944f5ebdf8f1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident antiparticle 2  (\[Theta] = \[Pi], \[Phi] = \[Pi])", \
+"Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485404481687*^9, 3.845485408113649*^9}, {3.845486942256542*^9, 
+   3.845486943368094*^9}, 3.845488219965313*^9, 
+   3.8454889223310423`*^9},ExpressionUUID->"889ba04f-2297-4353-939b-\
+ab32a7171bd3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"c9b5342a-c3c8-422d-bc87-04d5093c0cc7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing particle 1 (\[Theta], )", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.845486966208527*^9, 
+   3.845486967280221*^9}, 3.845488225109918*^9, {3.8454889272568007`*^9, 
+   3.845488932881019*^9}},ExpressionUUID->"e964c541-0108-4e61-89f3-\
+042c720f5f1a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"dfb55598-05f4-46af-ab2d-e172ac7ead0a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing particle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486527333982*^9}, {3.845486990768458*^9, 
+   3.845486992064247*^9}, 
+   3.845488228957412*^9},ExpressionUUID->"6ff7c2c4-d517-4376-acd0-\
+6d63280c2f8a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"d0eccbe9-ec41-459c-99ae-9c2ee334eab0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing antiparticle 1", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.845486565598296*^9, 
+   3.8454865660702057`*^9}, {3.8454869960405188`*^9, 3.845486997664632*^9}, 
+   3.8454882328699293`*^9},ExpressionUUID->"0748c66e-1574-4628-b487-\
+ea2c0440f87d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"9aafda03-ed78-441c-aafc-ec38d5db2e55"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing antiparticle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.8454865702858753`*^9, 
+   3.8454865777742233`*^9}, {3.84548700201642*^9, 3.845487003176325*^9}, 
+   3.84548823662182*^9},ExpressionUUID->"e15e3f33-56f6-42d8-864b-\
+751f3bdc0ec0"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"218dd8ec-cbba-4698-81bc-3af514de1162"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["YZ - plane", "Chapter",
+ CellChangeTimes->{{3.845485201313092*^9, 3.845485206817086*^9}, {
+  3.845488361686043*^9, 
+  3.8454883621504803`*^9}},ExpressionUUID->"5477a410-df07-470e-8ece-\
+1c07e2ae26c2"],
+
+Cell[CellGroupData[{
+
+Cell["Incident particle 1 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485375441914*^9, 3.845485390961733*^9}, {3.8454866069021177`*^9, 
+   3.8454866095662203`*^9}, {3.845487023016717*^9, 3.845487054816555*^9}, 
+   3.845487243729582*^9, {3.845488150629426*^9, 3.845488171597497*^9}, 
+   3.845488207341566*^9},ExpressionUUID->"8e309232-cd5a-4b24-9493-\
+0248559e38f7"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"a474031b-6384-4765-9964-698d6185fb3a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident particle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485392457902*^9, 3.845485393065907*^9}, {3.84548689064817*^9, 
+   3.845486892007846*^9}, 3.8454870664248037`*^9, {3.845487165153417*^9, 
+   3.845487166177401*^9}, 3.845487245169751*^9, {3.845488196893258*^9, 
+   3.845488203309725*^9}},ExpressionUUID->"ced1bd24-57d2-478c-8bcc-\
+e70f191290e8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"e9156149-ae95-43f9-b842-e8580c35bd62"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident antiparticle 1 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454853498573627`*^9, 3.84548535102531*^9}, {3.845485394417706*^9, 
+   3.84548540000143*^9}, {3.84548691087948*^9, 3.845486912903926*^9}, 
+   3.845488216341648*^9},ExpressionUUID->"4a42c6a5-8b10-4be4-8a30-\
+f89900101783"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"3b9c9c7c-3e0e-4075-973d-9211b7d3b2a3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident antiparticle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485404481687*^9, 3.845485408113649*^9}, {3.845486942256542*^9, 
+   3.845486943368094*^9}, 
+   3.845488219965313*^9},ExpressionUUID->"56bee0d4-b386-4432-aa9e-\
+c45ce03810b4"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"1d0e549b-82b0-464e-9993-187698404f85"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing particle 1 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.845486966208527*^9, 
+   3.845486967280221*^9}, 
+   3.845488225109918*^9},ExpressionUUID->"73eaba1b-8ce3-4f75-88b4-\
+c2f5f7a5820b"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"80ecdf09-e750-46e2-8760-ad1d0b6c42fc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing particle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486527333982*^9}, {3.845486990768458*^9, 
+   3.845486992064247*^9}, 
+   3.845488228957412*^9},ExpressionUUID->"a5352d7a-4c59-42cb-b0a0-\
+eb1abd6adce2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"395efe91-87bb-429f-9172-9cacf06b4a4a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing antiparticle 1", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.845486565598296*^9, 
+   3.8454865660702057`*^9}, {3.8454869960405188`*^9, 3.845486997664632*^9}, 
+   3.8454882328699293`*^9},ExpressionUUID->"a2a309de-d1c7-43ad-ae41-\
+a44e718f7ed8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"f06f9ee1-c762-4788-9ec2-a621cfed2258"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing antiparticle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.8454865702858753`*^9, 
+   3.8454865777742233`*^9}, {3.84548700201642*^9, 3.845487003176325*^9}, 
+   3.84548823662182*^9},ExpressionUUID->"cdffc171-386d-45f6-9a68-\
+3b8be27b0350"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"6b0421d4-d407-4b2e-ad70-1a9c49de5674"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["XY - plane", "Chapter",
+ CellChangeTimes->{{3.845485201313092*^9, 3.845485206817086*^9}, {
+  3.845488356462399*^9, 
+  3.845488356909753*^9}},ExpressionUUID->"e3c6a5c5-b6f3-43b8-8266-\
+20e10f22ee46"],
+
+Cell[CellGroupData[{
+
+Cell["Incident particle 1 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485375441914*^9, 3.845485390961733*^9}, {3.8454866069021177`*^9, 
+   3.8454866095662203`*^9}, {3.845487023016717*^9, 3.845487054816555*^9}, 
+   3.845487243729582*^9, {3.845488150629426*^9, 3.845488171597497*^9}, 
+   3.845488207341566*^9},ExpressionUUID->"0db69a2d-7858-402c-8a1f-\
+7d222a8cbf08"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"6dc01189-c5ae-4268-a543-7835e69ceb83"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident particle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485392457902*^9, 3.845485393065907*^9}, {3.84548689064817*^9, 
+   3.845486892007846*^9}, 3.8454870664248037`*^9, {3.845487165153417*^9, 
+   3.845487166177401*^9}, 3.845487245169751*^9, {3.845488196893258*^9, 
+   3.845488203309725*^9}},ExpressionUUID->"6fe024b6-66ba-49c3-826c-\
+619bb32dc781"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"f3fac587-b4cb-4f80-b0ef-f81c6df3cc30"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident antiparticle 1 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454853498573627`*^9, 3.84548535102531*^9}, {3.845485394417706*^9, 
+   3.84548540000143*^9}, {3.84548691087948*^9, 3.845486912903926*^9}, 
+   3.845488216341648*^9},ExpressionUUID->"cc6a060e-4c5c-4c39-8dfb-\
+aa612ca16811"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"a8b3414e-3551-4b16-8663-e8569d895693"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Incident antiparticle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.845485404481687*^9, 3.845485408113649*^9}, {3.845486942256542*^9, 
+   3.845486943368094*^9}, 
+   3.845488219965313*^9},ExpressionUUID->"0d911de3-6c92-46b0-90b4-\
+7efc565e6b6e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"08b7b091-b3bf-401c-bff5-8c36a63d8e0f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing particle 1 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.845486966208527*^9, 
+   3.845486967280221*^9}, 
+   3.845488225109918*^9},ExpressionUUID->"2048a2b2-e0b8-4f2e-a832-\
+ae541d518d74"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"e8f59049-c5ab-4478-a677-4d270da6dda4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing particle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486527333982*^9}, {3.845486990768458*^9, 
+   3.845486992064247*^9}, 
+   3.845488228957412*^9},ExpressionUUID->"91932669-abca-4e1b-88b3-\
+019b01dce155"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uL", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "c"}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"a4b613dd-7a8a-4ffe-9cd7-af274fbb28cf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing antiparticle 1", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.845486565598296*^9, 
+   3.8454865660702057`*^9}, {3.8454869960405188`*^9, 3.845486997664632*^9}, 
+   3.8454882328699293`*^9},ExpressionUUID->"a2ae5fee-f3b0-47df-b8fd-\
+0aa20802fd87"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"75c3ad48-b06e-4933-a6fa-694c4246a51f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Outgoing antiparticle 2 ", "Subsection",
+ CellChangeTimes->{{3.845485216921351*^9, 3.845485246214963*^9}, {
+   3.8454864975420094`*^9, 3.845486506093801*^9}, {3.8454865702858753`*^9, 
+   3.8454865777742233`*^9}, {3.84548700201642*^9, 3.845487003176325*^9}, 
+   3.84548823662182*^9},ExpressionUUID->"b7f1c605-859c-43a5-a89e-\
+eeb2fedc07de"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vR", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "\[Alpha]m"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]p"}], " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "\[Phi]"}], "]"}]}], ",", 
+     RowBox[{"\[Alpha]p", " ", "c"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vL", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[Alpha]p", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]p", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "c"}], ",", " ", 
+     RowBox[{"\[Alpha]m", " ", "s", " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{"I", " ", "\[Phi]"}], "]"}]}]}], "}"}]}], ";"}]}], "Input",Expr\
+essionUUID->"7e739424-880b-4df0-a6ea-baffa1aad89d"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 1008},
+WindowMargins->{{Automatic, 42}, {8, Automatic}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 160, 3, 125, "Title",ExpressionUUID->"3f35d79d-1307-4c40-907e-d4c427b640de"],
+Cell[743, 27, 3827, 57, 69, "Input",ExpressionUUID->"9d68519c-21f9-49ed-aed6-d6f07411e503"],
+Cell[4573, 86, 2186, 64, 127, "Input",ExpressionUUID->"f4a11731-88d7-4a6f-afb9-a9893bf988d2"],
+Cell[6762, 152, 609, 12, 164, "Text",ExpressionUUID->"9b1e6ab2-8a3f-4013-9df2-18b38eacb6c3"],
+Cell[CellGroupData[{
+Cell[7396, 168, 155, 3, 89, "Chapter",ExpressionUUID->"2eef13e4-d3c5-46dd-81f5-8a7b15806141"],
+Cell[CellGroupData[{
+Cell[7576, 175, 489, 7, 69, "Subsection",ExpressionUUID->"b29d5757-d765-4c7d-975b-9952d6f31aa4"],
+Cell[8068, 184, 1088, 32, 69, "Input",ExpressionUUID->"7a705936-cfb3-40db-a9c4-1ac860607e2b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9193, 221, 548, 8, 69, "Subsection",ExpressionUUID->"b7c98baf-fde7-495c-8096-360ef3c5249f"],
+Cell[9744, 231, 1088, 32, 69, "Input",ExpressionUUID->"d540f8df-8273-4fdc-871b-4ff42a205282"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10869, 268, 421, 6, 69, "Subsection",ExpressionUUID->"58246a79-a439-480f-bd21-0447202b8716"],
+Cell[11293, 276, 1031, 29, 69, "Input",ExpressionUUID->"6a941134-175b-4c26-a2f1-944f5ebdf8f1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12361, 310, 356, 6, 69, "Subsection",ExpressionUUID->"889ba04f-2297-4353-939b-ab32a7171bd3"],
+Cell[12720, 318, 1031, 29, 69, "Input",ExpressionUUID->"c9b5342a-c3c8-422d-bc87-04d5093c0cc7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13788, 352, 353, 5, 69, "Subsection",ExpressionUUID->"e964c541-0108-4e61-89f3-042c720f5f1a"],
+Cell[14144, 359, 1088, 32, 69, "Input",ExpressionUUID->"dfb55598-05f4-46af-ab2d-e172ac7ead0a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15269, 396, 293, 5, 69, "Subsection",ExpressionUUID->"6ff7c2c4-d517-4376-acd0-6d63280c2f8a"],
+Cell[15565, 403, 1088, 32, 69, "Input",ExpressionUUID->"d0eccbe9-ec41-459c-99ae-9c2ee334eab0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16690, 440, 348, 5, 69, "Subsection",ExpressionUUID->"0748c66e-1574-4628-b487-ea2c0440f87d"],
+Cell[17041, 447, 1031, 29, 69, "Input",ExpressionUUID->"9aafda03-ed78-441c-aafc-ec38d5db2e55"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18109, 481, 345, 5, 69, "Subsection",ExpressionUUID->"e15e3f33-56f6-42d8-864b-751f3bdc0ec0"],
+Cell[18457, 488, 1031, 29, 69, "Input",ExpressionUUID->"218dd8ec-cbba-4698-81bc-3af514de1162"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19537, 523, 206, 4, 89, "Chapter",ExpressionUUID->"5477a410-df07-470e-8ece-1c07e2ae26c2"],
+Cell[CellGroupData[{
+Cell[19768, 531, 413, 6, 69, "Subsection",ExpressionUUID->"8e309232-cd5a-4b24-9493-0248559e38f7"],
+Cell[20184, 539, 1088, 32, 69, "Input",ExpressionUUID->"a474031b-6384-4765-9964-698d6185fb3a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21309, 576, 410, 6, 69, "Subsection",ExpressionUUID->"ced1bd24-57d2-478c-8bcc-e70f191290e8"],
+Cell[21722, 584, 1088, 32, 69, "Input",ExpressionUUID->"e9156149-ae95-43f9-b842-e8580c35bd62"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22847, 621, 340, 5, 69, "Subsection",ExpressionUUID->"4a42c6a5-8b10-4be4-8a30-f89900101783"],
+Cell[23190, 628, 1031, 29, 69, "Input",ExpressionUUID->"3b9c9c7c-3e0e-4075-973d-9211b7d3b2a3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24258, 662, 295, 5, 69, "Subsection",ExpressionUUID->"56bee0d4-b386-4432-aa9e-c45ce03810b4"],
+Cell[24556, 669, 1031, 29, 69, "Input",ExpressionUUID->"1d0e549b-82b0-464e-9993-187698404f85"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25624, 703, 293, 5, 69, "Subsection",ExpressionUUID->"73eaba1b-8ce3-4f75-88b4-c2f5f7a5820b"],
+Cell[25920, 710, 1088, 32, 69, "Input",ExpressionUUID->"80ecdf09-e750-46e2-8760-ad1d0b6c42fc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27045, 747, 293, 5, 69, "Subsection",ExpressionUUID->"a5352d7a-4c59-42cb-b0a0-eb1abd6adce2"],
+Cell[27341, 754, 1088, 32, 69, "Input",ExpressionUUID->"395efe91-87bb-429f-9172-9cacf06b4a4a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28466, 791, 348, 5, 69, "Subsection",ExpressionUUID->"a2a309de-d1c7-43ad-ae41-a44e718f7ed8"],
+Cell[28817, 798, 1031, 29, 69, "Input",ExpressionUUID->"f06f9ee1-c762-4788-9ec2-a621cfed2258"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29885, 832, 345, 5, 69, "Subsection",ExpressionUUID->"cdffc171-386d-45f6-9a68-3b8be27b0350"],
+Cell[30233, 839, 1031, 29, 69, "Input",ExpressionUUID->"6b0421d4-d407-4b2e-ad70-1a9c49de5674"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31313, 874, 204, 4, 89, "Chapter",ExpressionUUID->"e3c6a5c5-b6f3-43b8-8266-20e10f22ee46"],
+Cell[CellGroupData[{
+Cell[31542, 882, 413, 6, 69, "Subsection",ExpressionUUID->"0db69a2d-7858-402c-8a1f-7d222a8cbf08"],
+Cell[31958, 890, 1088, 32, 69, "Input",ExpressionUUID->"6dc01189-c5ae-4268-a543-7835e69ceb83"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33083, 927, 410, 6, 69, "Subsection",ExpressionUUID->"6fe024b6-66ba-49c3-826c-619bb32dc781"],
+Cell[33496, 935, 1088, 32, 69, "Input",ExpressionUUID->"f3fac587-b4cb-4f80-b0ef-f81c6df3cc30"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34621, 972, 340, 5, 69, "Subsection",ExpressionUUID->"cc6a060e-4c5c-4c39-8dfb-aa612ca16811"],
+Cell[34964, 979, 1031, 29, 69, "Input",ExpressionUUID->"a8b3414e-3551-4b16-8663-e8569d895693"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36032, 1013, 295, 5, 69, "Subsection",ExpressionUUID->"0d911de3-6c92-46b0-90b4-7efc565e6b6e"],
+Cell[36330, 1020, 1031, 29, 69, "Input",ExpressionUUID->"08b7b091-b3bf-401c-bff5-8c36a63d8e0f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37398, 1054, 293, 5, 69, "Subsection",ExpressionUUID->"2048a2b2-e0b8-4f2e-a832-ae541d518d74"],
+Cell[37694, 1061, 1088, 32, 69, "Input",ExpressionUUID->"e8f59049-c5ab-4478-a677-4d270da6dda4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38819, 1098, 293, 5, 69, "Subsection",ExpressionUUID->"91932669-abca-4e1b-88b3-019b01dce155"],
+Cell[39115, 1105, 1088, 32, 69, "Input",ExpressionUUID->"a4b613dd-7a8a-4ffe-9cd7-af274fbb28cf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40240, 1142, 348, 5, 69, "Subsection",ExpressionUUID->"a2ae5fee-f3b0-47df-b8fd-0aa20802fd87"],
+Cell[40591, 1149, 1031, 29, 69, "Input",ExpressionUUID->"75c3ad48-b06e-4933-a6fa-694c4246a51f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41659, 1183, 345, 5, 69, "Subsection",ExpressionUUID->"b7f1c605-859c-43a5-a89e-eeb2fedc07de"],
+Cell[42007, 1190, 1031, 29, 69, "Input",ExpressionUUID->"7e739424-880b-4df0-a6ea-baffa1aad89d"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
