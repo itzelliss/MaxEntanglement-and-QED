@@ -1,0 +1,209 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6778,        201]
+NotebookOptionsPosition[      4402,        154]
+NotebookOutlinePosition[      4767,        170]
+CellTagsIndexPosition[      4724,        167]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Coefficients ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "ij"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3343c253-5463-459c-8ad1-01fb32bf8ec7"]
+}], "Title",
+ CellChangeTimes->{{3.851260289201733*^9, 
+  3.851260323065548*^9}},ExpressionUUID->"53a73362-b9b5-453d-8382-\
+473ad9ccc51b"],
+
+Cell[CellGroupData[{
+
+Cell["Conditions", "Chapter",
+ CellChangeTimes->{{3.851260344127756*^9, 
+  3.851260391945547*^9}},ExpressionUUID->"f2a037c4-7853-4aa8-ade7-\
+69fef15276c9"],
+
+Cell[CellGroupData[{
+
+Cell["Electron - muon scattering", "Section",
+ CellChangeTimes->{{3.851260408048613*^9, 
+  3.8512604169046917`*^9}},ExpressionUUID->"b927358c-e0d2-4d55-a9ab-\
+7c20aa476382"],
+
+Cell[CellGroupData[{
+
+Cell["XZ Plane", "Subsection",
+ CellChangeTimes->{{3.85126048668963*^9, 
+  3.851260489417931*^9}},ExpressionUUID->"bbf1e4e8-ca18-4fec-9409-\
+44f1d5d7dce5"],
+
+Cell[BoxData[
+ RowBox[{
+  UnderoverscriptBox["\[Sum]", 
+   RowBox[{"j", "=", "1"}], "3"], 
+  SubscriptBox["a", "\[Placeholder]"]}]], "Input",
+ CellChangeTimes->{{3.851260620090899*^9, 3.85126063552306*^9}, {
+  3.851260873036996*^9, 
+  3.8512608757746077`*^9}},ExpressionUUID->"19e8b84b-f410-4527-bcca-\
+d4843d09d7f5"]
+}, Open  ]],
+
+Cell["YZ Plane", "Subsection",
+ CellChangeTimes->{{3.8512604987610817`*^9, 
+  3.85126050094727*^9}},ExpressionUUID->"e47e0fe9-6ee1-4f71-8c28-\
+0781bc2a9fd3"],
+
+Cell["XY Plane", "Subsection",
+ CellChangeTimes->{{3.851260508673544*^9, 
+  3.851260511697053*^9}},ExpressionUUID->"137817ad-e5ab-4c4f-94e4-\
+8f8d6898b303"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Moller scattering", "Section",
+ CellChangeTimes->{{3.851260433688827*^9, 3.851260440112693*^9}, {
+  3.851260550057973*^9, 
+  3.8512605534498663`*^9}},ExpressionUUID->"cf00d11e-b78f-44a7-ae6a-\
+5c10efbd5b09"],
+
+Cell["XZ Plane", "Subsection",
+ CellChangeTimes->{{3.85126048668963*^9, 
+  3.851260489417931*^9}},ExpressionUUID->"11c89e4c-f91d-4070-bc34-\
+60b32975d845"],
+
+Cell["YZ Plane", "Subsection",
+ CellChangeTimes->{{3.8512604987610817`*^9, 
+  3.85126050094727*^9}},ExpressionUUID->"af3a76e7-c1d4-4726-9533-\
+041444f78c94"],
+
+Cell["XY Plane", "Subsection",
+ CellChangeTimes->{{3.851260508673544*^9, 
+  3.851260511697053*^9}},ExpressionUUID->"ad813995-1237-4436-878a-\
+91d55bfbe2df"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Bhabha scattering", "Section",
+ CellChangeTimes->{{3.85126044911335*^9, 
+  3.851260453272936*^9}},ExpressionUUID->"37bc7253-ca06-495e-87f3-\
+b16bc4c371aa"],
+
+Cell["XZ Plane", "Subsection",
+ CellChangeTimes->{{3.85126048668963*^9, 
+  3.851260489417931*^9}},ExpressionUUID->"16c48bfd-9345-4a45-9e65-\
+e656b5c4b56d"],
+
+Cell["YZ Plane", "Subsection",
+ CellChangeTimes->{{3.8512604987610817`*^9, 
+  3.85126050094727*^9}},ExpressionUUID->"caba31c0-bd9a-4978-b1d1-\
+0c9f8067c06b"],
+
+Cell["XY Plane", "Subsection",
+ CellChangeTimes->{{3.851260508673544*^9, 
+  3.851260511697053*^9}},ExpressionUUID->"285b4971-311e-4d5a-8f9b-\
+5655c244ca6a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Pair annihilation", "Section",
+ CellChangeTimes->{{3.851260460937196*^9, 
+  3.851260467936886*^9}},ExpressionUUID->"7a8655c9-988d-4cb8-b115-\
+1a1fe07b0aaa"],
+
+Cell["XZ Plane", "Subsection",
+ CellChangeTimes->{{3.85126048668963*^9, 
+  3.851260489417931*^9}},ExpressionUUID->"b4c0cb2d-19bd-470a-b54d-\
+0aed567045ae"],
+
+Cell["YZ Plane", "Subsection",
+ CellChangeTimes->{{3.8512604987610817`*^9, 
+  3.85126050094727*^9}},ExpressionUUID->"1c6fb7f5-59cc-4175-b83a-\
+2ca8639c82a1"],
+
+Cell["XY Plane", "Subsection",
+ CellChangeTimes->{{3.851260508673544*^9, 
+  3.851260511697053*^9}},ExpressionUUID->"764e6fe2-5298-48ed-a777-\
+8871d83068a0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Calculation", "Chapter",
+ CellChangeTimes->{{3.851260373560452*^9, 
+  3.851260377008121*^9}},ExpressionUUID->"8d50e9e7-d848-48b6-9829-\
+2a5ca9259556"]
+}, Open  ]]
+},
+WindowSize->{1852, 1016},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 336, 10, 130, "Title",ExpressionUUID->"53a73362-b9b5-453d-8382-473ad9ccc51b"],
+Cell[CellGroupData[{
+Cell[941, 36, 155, 3, 89, "Chapter",ExpressionUUID->"f2a037c4-7853-4aa8-ade7-69fef15276c9"],
+Cell[CellGroupData[{
+Cell[1121, 43, 173, 3, 85, "Section",ExpressionUUID->"b927358c-e0d2-4d55-a9ab-7c20aa476382"],
+Cell[CellGroupData[{
+Cell[1319, 50, 155, 3, 69, "Subsection",ExpressionUUID->"bbf1e4e8-ca18-4fec-9409-44f1d5d7dce5"],
+Cell[1477, 55, 317, 8, 79, "Input",ExpressionUUID->"19e8b84b-f410-4527-bcca-d4843d09d7f5"]
+}, Open  ]],
+Cell[1809, 66, 157, 3, 69, "Subsection",ExpressionUUID->"e47e0fe9-6ee1-4f71-8c28-0781bc2a9fd3"],
+Cell[1969, 71, 156, 3, 48, "Subsection",ExpressionUUID->"137817ad-e5ab-4c4f-94e4-8f8d6898b303"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2162, 79, 213, 4, 85, "Section",ExpressionUUID->"cf00d11e-b78f-44a7-ae6a-5c10efbd5b09"],
+Cell[2378, 85, 155, 3, 69, "Subsection",ExpressionUUID->"11c89e4c-f91d-4070-bc34-60b32975d845"],
+Cell[2536, 90, 157, 3, 48, "Subsection",ExpressionUUID->"af3a76e7-c1d4-4726-9533-041444f78c94"],
+Cell[2696, 95, 156, 3, 48, "Subsection",ExpressionUUID->"ad813995-1237-4436-878a-91d55bfbe2df"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2889, 103, 161, 3, 85, "Section",ExpressionUUID->"37bc7253-ca06-495e-87f3-b16bc4c371aa"],
+Cell[3053, 108, 155, 3, 69, "Subsection",ExpressionUUID->"16c48bfd-9345-4a45-9e65-e656b5c4b56d"],
+Cell[3211, 113, 157, 3, 48, "Subsection",ExpressionUUID->"caba31c0-bd9a-4978-b1d1-0c9f8067c06b"],
+Cell[3371, 118, 156, 3, 48, "Subsection",ExpressionUUID->"285b4971-311e-4d5a-8f9b-5655c244ca6a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3564, 126, 162, 3, 85, "Section",ExpressionUUID->"7a8655c9-988d-4cb8-b115-1a1fe07b0aaa"],
+Cell[3729, 131, 155, 3, 69, "Subsection",ExpressionUUID->"b4c0cb2d-19bd-470a-b54d-0aed567045ae"],
+Cell[3887, 136, 157, 3, 48, "Subsection",ExpressionUUID->"1c6fb7f5-59cc-4175-b83a-2ca8639c82a1"],
+Cell[4047, 141, 156, 3, 48, "Subsection",ExpressionUUID->"764e6fe2-5298-48ed-a777-8871d83068a0"]
+}, Open  ]]
+}, Open  ]],
+Cell[4230, 148, 156, 3, 89, "Chapter",ExpressionUUID->"8d50e9e7-d848-48b6-9829-2a5ca9259556"]
+}, Open  ]]
+}
+]
+*)
+
